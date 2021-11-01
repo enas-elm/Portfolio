@@ -1,0 +1,15 @@
+@mixin partie_centre {
+    display: flex; /*Pour que l'image et texte soient à côte à côte*/
+    align-items: center;
+    margin:auto;
+}
+
+@mixin width {
+    width: 70%;
+}
+
+@mixin medium {
+    @media (max-width: 800px) {
+        @content;
+    }
+ }
