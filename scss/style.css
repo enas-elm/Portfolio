@@ -8,6 +8,8 @@
 
 body {
   background-color: #fcf7f1;
+  overflow-x: hidden;
+  /* Hide scrollbars */
 }
 
 header {
@@ -98,10 +100,6 @@ p {
   color: #9c583f;
 }
 
-div:not(.grille_tuilerie, .tuilerie, .capacite, footer section div) {
-  width: 70%;
-}
-
 /* PRESENTATION --------------------------------------------------------------------------------------------- ( */
 .img_cote {
   width: 25%;
@@ -115,6 +113,7 @@ div:not(.grille_tuilerie, .tuilerie, .capacite, footer section div) {
   /*Pour que l'image et texte soient à côte à côte*/
   align-items: center;
   margin: auto;
+  width: 70%;
 }
 
 #presentation p {
@@ -146,17 +145,38 @@ div:not(.grille_tuilerie, .tuilerie, .capacite, footer section div) {
 
 /*GRILLE COMPETENCE ( */
 .grille_capacite {
+  width: 90%;
   height: fit-content;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 3.3333333333fr 3.3333333333fr;
+  grid-template-columns: 5fr 5fr;
   /* fr prend en considération on alentour et s'adapte avec*/
+  gap: 20px;
 }
 
-.capacite {
-  height: 100%;
+.milieu {
+  justify-content: center;
+}
+
+button {
+  display: flex;
+  padding: 0px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 13%;
   margin-left: auto;
   margin-right: auto;
+}
+
+button img {
+  width: 100%;
+  filter: invert(1);
+}
+
+.div_appear {
+  display: none;
+  margin: 10px auto;
 }
 
 /* ----------------------------------------------------------------------------------------------------------- ) ) */
@@ -235,6 +255,7 @@ div:not(.grille_tuilerie, .tuilerie, .capacite, footer section div) {
   /*Pour que l'image et texte soient à côte à côte*/
   align-items: center;
   margin: auto;
+  width: 70%;
   margin-top: 160px;
 }
 @media (max-width: 800px) {
@@ -260,8 +281,9 @@ footer {
   margin-top: 80px;
   height: 300px;
   width: 100%;
-  background-image: url("../img/vague.svg");
   font-weight: 700;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='300' preserveAspectRatio='none' viewBox='0 0 1440 300'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1010%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c121 C 48%2c102.6 144%2c27 240%2c29 C 336%2c31 384%2c130.2 480%2c131 C 576%2c131.8 624%2c41 720%2c33 C 816%2c25 864%2c86 960%2c91 C 1056%2c96 1104%2c52.6 1200%2c58 C 1296%2c63.4 1392%2c106 1440%2c118L1440 300L0 300z' fill='rgba(255%2c 235%2c 205%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c182 C 72%2c195.6 216%2c256 360%2c250 C 504%2c244 576%2c148.6 720%2c152 C 864%2c155.4 936%2c264.8 1080%2c267 C 1224%2c269.2 1368%2c183.8 1440%2c163L1440 300L0 300z' fill='rgba(156%2c 88%2c 63%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1010'%3e%3crect width='1440' height='300' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-position: center;
 }
 
 .logo_footer {
@@ -270,13 +292,13 @@ footer {
 
 footer section {
   position: absolute;
-  bottom: 30px;
+  bottom: 40px;
   width: 100%;
 }
 
 footer div {
   display: flex;
-  margin: 0 auto;
+  margin: 0px auto;
   align-items: center;
   justify-content: center;
 }
@@ -296,7 +318,7 @@ footer p:hover {
 
 /* ---- ) */
 @media (max-width: 800px) {
-  section div:not(.grille_tuilerie, .capacite), #creation p {
+  .stream div, #presentation div, #creation > p:first-of-type {
     width: 90%;
   }
 

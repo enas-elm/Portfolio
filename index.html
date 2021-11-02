@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="scss/style.css">
+    <script src="script/script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enas Portfolio</title>
 </head>
@@ -45,26 +46,78 @@
         <hr>
 
         <div class="grille_capacite">
-            <div class="capacite capacite1">
+            <div class="capacite">
                 <h3>En développement</h3>
                 <br/>
-                <p>
-                    - HTML / CSS <br/>
-                    - Javascript <br/>
-                    - PHP / MySQL <br/>
-                    - Python
-                 </p>
+
+                    <li>
+                    <button class="milieu" onclick="htmlcss()"> <img src="img/html.png" alt="Logo html"><img src="img/css.png" alt="Logo css"></button>
+                    <div class="div_appear" id="html_css">
+                        <p>Ayant codé plusieurs fois en HTML et CSS, je peux tout à fait structurer siteweb pour ensuite 
+                            le styliser grâce au flexbox, au grid, sans oublier de le rendre responsive, tout ça avec
+                            l'aide de Sass.  
+                        </p>
+                    </div>
+                    </li>
+
+                    <br/>
+                    <li>
+                    <button onclick="javascript()"><img src="img/js.png" alt="Logo js"></button>
+                    <div class ="div_appear "id="javascript">
+                        <p>Le JS vient mettre de la vie au site. Je me sers de la bibliothèque jQuery pour mettre en place les dark modes,
+                             les menus et tout autres d'animations possibles avec ce langague.
+                        </p>
+                    </div>
+                    </li>
+                    
+                    <br/>
+                    <button class="milieu" onclick="phpsql()"><img src="img/php.png" alt="Logo php"><img src="img/mysql.png" alt="Logo mysql"></button>
+                    <div class ="div_appear "id="php_sql">
+                        <p>J'ai pu créer des bases de données en récupérant les données qu'un utilisateur rentre et en les stockant de manière à ce qu'il puisse 
+                             les modifier par la suite.                      
+                        </p>
+                    </div>
+                    
+                    <br/>
+                    <button onclick="python()"><img src="img/python.png" alt="Logo python"></button>
+                    <div class ="div_appear "id="python">
+                        <p>J'ai commencé le développement avec Python qui est mon langague favoris grâce à toute les choses
+                            possible de faire avec comme des petits jeux, décrypter du binaire ou générer des mots de passe selon des conditions.
+                        </p>
+                    </div>
+
+        
             </div>
-            <div class="capacite capacite2">
+
+            <div class="capacite">
                 <h3>Outils digitaux</h3>
                 <br/>
-                <p>
-                    - Adobe xD<br/>
-                    - Dreamweaver <br/>
-                    - Photoshop <br/>
-                    - After Effects <br/>
-                    - Figma
-                </p>
+            
+                    <button onclick="figma()"> <img src="img/f.png" alt="Logo figma"></button>
+                    <div class="div_appear" id="figma">
+                        <p>J'ai pu manipuler l'interface de Figma pour la création de l'interface utilisateur.</p>
+                    </div>
+
+                    <br/>
+                    <button onclick="xd()"><img src="img/xd.png" alt="Logo adobe xd"></button>
+                    <div class ="div_appear "id="xd">
+                        <p>Adobe xd m'a servi plusieurs fois pour faire des wireframes, puis pour faire du prototypage pour se déplacer dans une application ou dans un site.</p>
+                    </div>
+                    
+                    <br/>
+                    <button onclick="dreamweaver()"><img src="img/dw.png" alt="Logo dreamweaver"></button>
+                    <div class ="div_appear "id="dreamweaver">
+                        <p>J'ai appris à utiliser Dreamweaver lors d'un stage. J'ai pu voir que l'outil était très pratique pour recher un terme sur tout un site
+                        et pour éliminer les liens cassés.</p>
+                    </div>
+
+                    <br/>
+                    <button onclick="photoshop()"><img src="img/ps.png" alt="Logo Photoshop"></button>
+                    <div class ="div_appear "id="photoshop">
+                        <p>Photoshop m'a servi plusieurs fois pour faire des retouches, que ce soit pour un coup de beauté et pour ajouter, retirer ou modifier des éléments d'une image.</p>
+                    </div>
+
+              
             </div>
         </div>
     </section>
